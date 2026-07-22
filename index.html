@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalender abonnieren</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, sans-serif;
+        background: #f7f7f7;
+      }
+
+      main {
+        width: min(640px, 92vw);
+        background: #fff;
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      button {
+        font-size: 1rem;
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 20px;
+        cursor: pointer;
+        background: #0d6efd;
+        color: #fff;
+      }
+
+      #subscribe-area {
+        margin-top: 16px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      a {
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Kalender abonnieren</h1>
+      <p>Klicke auf den Knopf, um den Kalender zu abonnieren.</p>
+      <button id="show-link" type="button">Kalender-Link anzeigen</button>
+
+      <section id="subscribe-area" class="hidden" aria-live="polite">
+        <p>
+          Öffne diesen Link auf deinem iPhone:
+          <a id="webcal-link" href="webcal://waschi24.github.io/automated-iphone-calender/calendar.ics"
+            >webcal://waschi24.github.io/automated-iphone-calender/calendar.ics</a
+          >
+        </p>
+        <p>
+          Falls nötig, kannst du auch diesen HTTPS-Link kopieren:
+          <a href="https://waschi24.github.io/automated-iphone-calender/calendar.ics"
+            >https://waschi24.github.io/automated-iphone-calender/calendar.ics</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <script>
+      const button = document.getElementById("show-link");
+      const subscribeArea = document.getElementById("subscribe-area");
+
+      button.addEventListener("click", () => {
+        subscribeArea.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
