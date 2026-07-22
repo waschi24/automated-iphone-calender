@@ -1,8 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//ical.marudot.com//iCal Event Maker
-X-WR-CALNAME:test
-NAME:test
+X-WR-CALNAME:waschi's calender
+NAME:waschi's calender
 REFRESH-INTERVAL;VALUE=DURATION:P1M
 CALSCALE:GREGORIAN
 BEGIN:VTIMEZONE
